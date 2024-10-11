@@ -11,21 +11,21 @@ let quizData = [
   },
 
   {
-    question: "CSS stands for?",
-    a: "Coding StyleSheet",
-    b: "Cascading StyleSheet",
-    c: "Both a & b",
-    d: "None of above",
-    ans: "ans2",
+    question: "Which HTML element defines the document's metadata?",
+    a: "<meta>",
+    b: "<link>",
+    c: "<header>",
+    d: "<body>",
+    ans: "ans1",
   },
 
   {
-    question: "PHP stands for?",
-    a: "Personal Home Page",
-    b: "Both a & c",
-    c: "HyperText Preprocessor",
-    d: "None of above",
-    ans: "ans3",
+    question: "What is the correct HTML element for inserting a line break?",
+    a: "<br>",
+    b: "<lb>",
+    c: "<hr>",
+    d: "<break>",
+    ans: "ans1",
   },
 
   {
@@ -37,13 +37,53 @@ let quizData = [
     ans: "ans4",
   },
   {
-    question: "JavaScript is an:",
-    a: "Markup Language",
-    b: "Styling Language",
-    c: "All of above",
-    d: "Programming Language",
-    ans: "ans4",
-  }
+    question: "What is the correct HTML for creating a hyperlink?",
+    a: "<a href='url'>Link</a>",
+    b: "<a>Link</a>",
+    c: "<link>url</link>",
+    d: "<href='url'>Link</href>",
+    ans: "ans1",
+  },
+  {
+    question: "Which HTML attribute is used to define inline styles?",
+    a: "class",
+    b: "style",
+    c: "styles",
+    d: "font",
+    ans: "ans2",
+  },
+  {
+    question: "Which HTML element is used to specify a header for a document?",
+    a: "<head>",
+    b: "<header>",
+    c: "<h1>",
+    d: "<top>",
+    ans: "ans2",
+  },
+  {
+    question: "Which HTML attribute specifies an alternate text for an image if the image cannot be displayed?",
+    a: "src",
+    b: "alt",
+    c: "title",
+    d: "href",
+    ans: "ans2",
+  },
+  {
+    question: "How can you make a numbered list in HTML?",
+    a: "<ul>",
+    b: "<list>",
+    c: "<ol>",
+    d: "<li>",
+    ans: "ans3",
+  },
+  {
+    question: "Which attribute is used in HTML to open a link in a new tab or window?",
+    a: "target='_self'",
+    b: "target='_new'",
+    c: "target='_blank'",
+    d: "href='_blank'",
+    ans: "ans3",
+  },
 ]
 
 // Initializing the variables:
@@ -91,7 +131,7 @@ submitBtn.addEventListener('click', () => {
   const checkingAnswers = checkAnswers()
   console.log(checkingAnswers)
   if (checkingAnswers === quizData[QuizIndex].ans) {
-    score +=1
+    score +=5
     // console.log(score)
   }
   QuizIndex++
@@ -101,7 +141,7 @@ submitBtn.addEventListener('click', () => {
     loadQuiz()
   }
   else {
-    question.innerHTML = `Your score is  ${score} / ${quizData.length}`;
+    question.innerHTML = `Your score is  ${score} / 50`;
     document.querySelector('ul').style.display = 'none';
     submitBtn.innerHTML = 'Play Again'
     submitBtn.addEventListener('click', ()=>{
